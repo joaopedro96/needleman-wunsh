@@ -36,7 +36,7 @@ def logHelpInstructions():
         -m --blosumMatrix   Matriz de pontuação BLOSUM a ser utilizada (45, 62 ou 80). Valor padrão '62'.
         -h --help           Lista de instruções para uso deste script
     """
-)
+   )
 
 
 def readInputArguments():

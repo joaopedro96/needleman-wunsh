@@ -74,10 +74,10 @@ BLOSUM45 = {
 }
 
 def getMatchScore(blosum, firstAminoAcid, secondAminoAcid):
-    if blosum == 45:
+    if blosum == '45':
         score = BLOSUM45[firstAminoAcid][secondAminoAcid]
 
-    elif blosum == 80:
+    elif blosum == '80':
         score = BLOSUM80[firstAminoAcid][secondAminoAcid]   
 
     else:
