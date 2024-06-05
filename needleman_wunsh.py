@@ -119,6 +119,12 @@ def logTable(matrix, firstSequence, secondSequence):
     display(formattedTable)
 
 
+def makeOutputFile(firstAlignedSequence, secondAlignedSequence):
+    firstAlignedSequence = ('>sequencia_v', firstAlignedSequence)
+    secondAlignedSequence = ('>sequencia_w', secondAlignedSequence)
+    Fasta.makeFastaFile(firstAlignedSequence, secondAlignedSequence)
+
+
 #VARIAVEIS DE ENTRADA
 tempFileData = getDataFromTempFile()
 firstSequencePath = tempFileData[0].strip()
@@ -146,3 +152,4 @@ print('\nSequencia V:')
 print(globalAlignedSequences[0])
 print('\nSequencia W:')
 print(globalAlignedSequences[1])
+makeOutputFile(globalAlignedSequences[0], globalAlignedSequences[1])

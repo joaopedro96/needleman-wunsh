@@ -22,6 +22,14 @@ def getFastaFileSequence(inputFilePath: str):
     return fastaSequence
 
 
+def makeFastaFile(firstSequence, secondSequence):
+    outputFile = open('alinhamento_saida.fasta', 'w')
+    for linha in firstSequence:
+        outputFile.write(linha + '\n')
+    for linha in secondSequence:
+        outputFile.write(linha + '\n')
+    outputFile.close
+
 # FUNÇÕES PRIVADAS
 
 def __checkIfHasFastaFormat(fastaData):
